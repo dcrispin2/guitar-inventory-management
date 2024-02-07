@@ -26,7 +26,7 @@ public class InventoryController {
     }
 
     @GetMapping("/search")
-    public List<Guitar> search (@RequestParam String serialNumber, @RequestParam double price, @RequestParam String builder, @RequestParam String model,@RequestParam String type,@RequestParam String backWood, @RequestParam String topWood){
+    public List<Guitar> search (@RequestParam String serialNumber, @RequestParam double price, @RequestParam Guitar.Builder builder, @RequestParam String model,@RequestParam Guitar.Type type,@RequestParam Guitar.Wood backWood, @RequestParam Guitar.Wood topWood){
         try {
             Guitar g = new Guitar();
 

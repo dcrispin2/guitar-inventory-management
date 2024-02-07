@@ -42,11 +42,11 @@ public class InventoryRepository {
             Guitar g = new Guitar();
             g.setSerialNumber(words[0]);
             g.setPrice(Double.parseDouble(words[1]));
-            g.setBuilder(words[2]);
+            g.setBuilder(Guitar.Builder.valueOf(words[2].toUpperCase()));
             g.setModel(words[3]);
-            g.setType(words[4]);
-            g.setBackWood(words[5]);
-            g.setTopWood(words[6]);
+            g.setType(Guitar.Type.valueOf(words[4].toUpperCase()));
+            g.setBackWood(Guitar.Wood.valueOf(words[5].toUpperCase()));
+            g.setTopWood(Guitar.Wood.valueOf(words[6].toUpperCase()));
 
             result.add(g);
         }

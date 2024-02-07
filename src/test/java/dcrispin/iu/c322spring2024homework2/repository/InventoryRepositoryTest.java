@@ -16,22 +16,22 @@ class InventoryRepositoryTest {
         Guitar test = new Guitar();
         test.setSerialNumber("1111");
         test.setPrice(10.00);
-        test.setBuilder("Fender");
+        test.setBuilder(Guitar.Builder.valueOf("FENDER"));
         test.setModel("Strato");
-        test.setType("Type");
-        test.setBackWood("Maple");
-        test.setTopWood("Mahogany");
-        //InventoryRepository.addGuitar(test);
+        test.setType(Guitar.Type.valueOf("ELECTRIC"));
+        test.setBackWood(Guitar.Wood.valueOf("MAPLE"));
+        test.setTopWood(Guitar.Wood.valueOf("MAPLE"));
+        InventoryRepository.addGuitar(test);
 
         Guitar test1 = new Guitar();
         test1.setSerialNumber("1234");
         test1.setPrice(10.00);
-        test1.setBuilder("Fender");
+        test1.setBuilder(Guitar.Builder.valueOf("FENDER"));
         test1.setModel("Strato");
-        test1.setType("Type");
-        test1.setBackWood("Ebonwood");
-        test1.setTopWood("Mahogany");
-        //InventoryRepository.addGuitar(test1);
+        test1.setType(Guitar.Type.valueOf("ACOUSTIC"));
+        test1.setBackWood(Guitar.Wood.valueOf("MAHOGANY"));
+        test1.setTopWood(Guitar.Wood.valueOf("MAHOGANY"));
+        InventoryRepository.addGuitar(test1);
 
         //System.out.println(test);
         //System.out.println(InventoryRepository.getGuitar("1111"));
@@ -45,7 +45,7 @@ class InventoryRepositoryTest {
         Guitar gt2 = InventoryRepository.getGuitar("1234");
 
         assert (gt1.getSerialNumber().equals("1111"));
-        assert (gt2.getBackWood().equals("Ebonwood"));
+        assert (gt2.getBackWood().equals("Mahogany"));
         //assert (InventoryRepository.getGuitar("1111").equals(test));
         //assert (InventoryRepository.getGuitar("1234").equals(test1));
     }
@@ -54,13 +54,13 @@ class InventoryRepositoryTest {
     void searchTest() throws IOException {
         Guitar gt1 = new Guitar();
 
-        gt1.setBuilder("Fender");
+        gt1.setBuilder(Guitar.Builder.valueOf("FENDER"));
         gt1.setPrice(10.00);
 
         List<Guitar> testList = InventoryRepository.search(gt1);
         assert(testList.get(0).getSerialNumber().equals("1111"));
         assert(testList.get(0).getPrice() == 10.0);
-        assert(testList.get(1).getBackWood().equals("Ebonwood"));
+        assert(testList.get(1).getBackWood().equals("Mahogany"));
         assert(testList.get(1).getSerialNumber().equals("1234"));
     }
 }
