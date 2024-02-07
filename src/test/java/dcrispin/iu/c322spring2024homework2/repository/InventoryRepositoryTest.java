@@ -53,7 +53,7 @@ class InventoryRepositoryTest {
     @Test
     void searchTest() throws IOException {
         Guitar gt1 = new Guitar();
-
+        //
         gt1.setBuilder(Guitar.Builder.valueOf("FENDER"));
         gt1.setPrice(10.00);
 
