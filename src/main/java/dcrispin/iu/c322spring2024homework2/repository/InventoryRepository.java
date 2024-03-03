@@ -15,7 +15,7 @@ import java.util.List;
 @Component
 public class InventoryRepository {
     private static final String NEW_LINE = System.lineSeparator();
-    private static final String DATABASE_NAME = "guitars_database";
+    private static final String DATABASE_NAME = "guitar-inventory-management";
     private static void appendToFile(Path path, String content) throws IOException {
         Files.write(path,
                 content.getBytes(StandardCharsets.UTF_8),
