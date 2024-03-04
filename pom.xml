@@ -75,9 +75,7 @@
 				</dependencies>
 				<configuration>
 					<includes>
-						<include>
-							dcrispin.iu.c322spring2024homework2.repository.InventoryRepositoryTest
-						</include>
+
 					</includes>
 				</configuration>
 			</plugin>
