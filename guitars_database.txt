@@ -5,3 +5,5 @@
 1234,10.0,Fender,Strato,acoustic,Mahogany,Mahogany
 1111,10.0,Fender,Strato,electric,Maple,Maple
 1234,10.0,Fender,Strato,acoustic,Mahogany,Mahogany
+1111,10.0,Fender,Strato,electric,Maple,Maple
+1234,10.0,Fender,Strato,acoustic,Mahogany,Mahogany
