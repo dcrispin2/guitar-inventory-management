@@ -1,3 +1,0 @@
-0001,11.11,Fender,C,electric,Maple,Maple
-1111,10.0,Fender,Strato,electric,Maple,Maple
-1234,10.0,Fender,Strato,acoustic,Mahogany,Mahogany
